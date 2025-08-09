@@ -30,7 +30,7 @@ body {
     align-items: center;
     justify-content: center;
     font-family: "Inter", sans-serif;
-    background: url('../img/bg.png');
+    background: url('./img/bg.png');
     background-repeat: repeat;
     background-size: 30%;
 }
