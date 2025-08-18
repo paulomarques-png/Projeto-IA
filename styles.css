@@ -228,6 +228,42 @@ textarea::placeholder {
     opacity: .3;
 }
 
+.mensagem-erro {
+    color: #dc3545;
+    background-color: #f8d7da;
+    border-radius: 4px;
+    padding: 10px 15px;
+    margin-top: 10px;
+    font-size: 14px;
+    font-weight: 500;
+    animation: msg-erro 0.3s ease-in;
+}
+
+.mensagem-erro {
+    position: relative;
+    padding-left: 60px;
+}
+
+.mensagem-erro::after {
+    content: "⚠️";
+    position: absolute;
+    left: 18px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 20px;
+}
+
+@keyframes msg-erro {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 @media (max-width: 1085px) {
     body{
         background-size: 40%;
