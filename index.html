@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
+    
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,100..900&display=swap');
     </style>
@@ -25,11 +26,14 @@
                 <button class="btn-pgt" type="submit">Perguntar</button>
                 <button class="btn-limp" type="reset">Limpar</button>
             </span><br>
-            <textarea placeholder="Resposta da IA" name="resposta-ia" id="resposta-ia"></textarea>
+            
+            <div id="resposta-ia" class="resposta-ia"></div>
             <button id="btn-copiar" class="btn-copiar" type="button" style="display: none;">Copiar resposta</button>
         </form>
     </main>
     
     <script src="script.js"></script>
+    <!-- Bibliote para converter o Markdown em html-->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 </body>
 </html>

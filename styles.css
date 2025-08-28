@@ -144,7 +144,7 @@ button:active {
     color: rgb(211, 94, 79);
 }
 
-textarea {
+.resposta-ia {
     width: 100%;
     height: auto;
     margin-top: 1em;
@@ -159,7 +159,7 @@ textarea {
     border: 1px solid #00FFF2;
 }
 
-textarea::placeholder {
+.resposta-ia:placeholder {
     color: #00FFF2;
     opacity: .3;
 }

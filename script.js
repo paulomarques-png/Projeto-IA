@@ -70,7 +70,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const respostaIa = dados.choices[0].message.content;
 
             // Exibe resposta
-            areaResposta.value = respostaIa;
+            areaResposta.innerHTML = marked.parse(respostaIa);
             areaResposta.style.display = 'block';
             botaoCopiar.style.display = 'inline-block'; // mostra botão copiar
 
@@ -91,7 +91,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     //Botão copiar
     botaoCopiar.addEventListener('click', () => {
-        navigator.clipboard.writeText(areaResposta.value)
+        navigator.clipboard.writeText(areaResposta.textContent)
             .then(() => {
                 botaoCopiar.textContent = 'Copiado!';
                 setTimeout(() => botaoCopiar.textContent = 'Copiar resposta', 1500);
