@@ -7,6 +7,15 @@ document.addEventListener('DOMContentLoaded', () => {
     const botaoEnviar = document.querySelector('.btn-pgt');
     const areaResposta = document.getElementById('resposta-ia');
 
+    //Cria botão copiar, mas deixa oculto
+    const botaoCopiar = document.createElement('button');
+    botaoCopiar.textContent = 'Copiar resposta';
+    botaoCopiar.type = 'button';
+    botaoCopiar.className = 'btn-copiar';
+    botaoCopiar.style.display = 'none';
+//    formulario.appendChild(botaoCopiar);
+    areaResposta.insertAdjacentElement('afterend', botaoCopiar);
+
     // Oculta a área de resposta inicialmente
     areaResposta.style.display = 'none';
 
@@ -16,6 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
         // Limpa resposta anterior e erros
         areaResposta.value = '';
         areaResposta.style.display = 'none';
+        botaoCopiar.style.display = 'none';
         limparErros();
 
         // Valida entradas
@@ -62,6 +72,7 @@ document.addEventListener('DOMContentLoaded', () => {
             // Exibe resposta
             areaResposta.value = respostaIa;
             areaResposta.style.display = 'block';
+            botaoCopiar.style.display = 'inline-block'; // mostra botão copiar
 
         } catch (erro) {
             exibirErro(erro.message || 'Ocorreu um erro ao processar sua solicitação.');
@@ -74,8 +85,23 @@ document.addEventListener('DOMContentLoaded', () => {
     formulario.addEventListener('reset', () => {
         areaResposta.value = '';
         areaResposta.style.display = 'none';
+        botaoCopiar.style.display = 'none';
         limparErros();
     });
+
+    //Botão copiar
+    botaoCopiar.addEventListener('click', () => {
+        navigator.clipboard.writeText(areaResposta.value)
+            .then(() => {
+                botaoCopiar.textContent = 'Copiado!';
+                setTimeout(() => botaoCopiar.textContent = 'Copiar resposta', 1500);
+            })
+            .catch(() => {
+                exibirErro('Não foi possível copiar o texto.');
+            });
+    });
+
+
 
     // Funções auxiliares
     function exibirCarregamento(estaCarregando) {
