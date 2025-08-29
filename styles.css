@@ -209,6 +209,23 @@ button:hover {
 .resposta-ia {
     width: 100%;
     height: auto;
+    min-width: 100%;
+    max-width: 100%;
+    margin-top: 1em;
+    padding: 1em;
+    margin-bottom: 1em;
+    border-radius: 1em;
+    font-family: "Inter", sans-serif;
+    font-size: 3em;
+    color: #2CFF05;
+    font-weight: 200;
+    background-color: #151937;
+    border: 1px solid #00FFF2;
+    overflow-y: scroll;
+}
+
+.resposta-ia p{
+    line-height: 1.3em;
 }
     
 textarea {
@@ -221,7 +238,7 @@ textarea {
     margin-bottom: 1em;
     border-radius: 1em;
     font-family: "Inter", sans-serif;
-    font-size: 3.6em;
+    font-size: 1em;
     color: #2CFF05;
     font-weight: 200;
     background-color: #151937;
