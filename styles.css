@@ -53,9 +53,10 @@ main {
     overflow: hidden;
     width: 100%;
     padding: 1em .5em;
-    text-align: center;
     font-size: 10em;
     font-weight: 700;
+    letter-spacing: 0.5em;
+    text-align: center;
     text-shadow: 
     0 0 10px #00FFF2,
     0 0 20px #00FFF2,
@@ -233,6 +234,32 @@ textarea {
     opacity: .3;
 }
 
+.btn-copiar {
+    width: auto;
+    padding: .7em 1.5em;
+    margin-top: .5em;
+    border: none;
+    border-radius: .5em;
+    outline: 1px solid #00FFF2;
+    outline-offset: .5em;
+    transition: outline-offset .1s ease-in-out;
+    font-size: 2.5em;
+    font-family: "Inter", sans-serif;
+    color: #00FFF2;
+    background: linear-gradient(50deg, rgba(7, 27, 57, 1) 9%, rgba(64, 35, 58, 1) 80%, rgba(92, 64, 50, 1) 120%);
+    cursor: pointer;
+}
+
+.btn-copiar:hover {
+    outline-offset: .25em;
+    color: rgb(173, 243, 116);
+}
+
+.btn-copiar:active {
+    outline-offset: 0em;
+    color: rgb(113, 231, 17);
+}    
+
 .mensagem-erro {
     color: #dc3545;
     background-color: #f8d7da;
@@ -291,31 +318,6 @@ textarea {
         gap: 5em;
     }
 }
-.btn-copiar {
-    width: auto;
-    padding: .7em 1.5em;
-    margin-top: .5em;
-    border: none;
-    border-radius: .5em;
-    outline: 1px solid #00FFF2;
-    outline-offset: .5em;
-    transition: outline-offset .1s ease-in-out;
-    font-size: 2.5em;
-    font-family: "Inter", sans-serif;
-    color: #00FFF2;
-    background: linear-gradient(50deg, rgba(7, 27, 57, 1) 9%, rgba(64, 35, 58, 1) 80%, rgba(92, 64, 50, 1) 120%);
-    cursor: pointer;
-}
-
-.btn-copiar:hover {
-    outline-offset: .25em;
-    color: rgb(173, 243, 116);
-}
-
-.btn-copiar:active {
-    outline-offset: 0em;
-    color: rgb(113, 231, 17);
-}    
 
 @media (max-width: 480px) {
     .api{
