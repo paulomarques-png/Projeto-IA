@@ -12,16 +12,22 @@
 </head>
 <body>
     <main>
+        <h1 class="titulo">A&nbsp&nbspR&nbsp&nbspI&nbsp&nbspA</h1>
+        <p class="subtitulo">ASSISTENTE DE RESPOSTA<br>POR INTELIGÊNCIA ARTIFICIAL</p>
         <form action="">
-            <label for="api-key">Chave da API:</label><br>
+            <div class="api">
+                <span class="mod">
+                    <label for="model">Modelo: </label>
+                    <select id="model">
+                        <option value="gpt-4.1-mini">GPT-4.1 Mini</option>
+                        <option value="gpt-4.1">GPT-4.1</option>
+                    </select>
+                </span>
+                <label for="api-key">Chave da API:</label>
+            </div>
             <input type="password" id="api-key" name="api-key" placeholder="Digite sua chave API"><br>
             <label for="pergunta">Sua pergunta:</label><br>
             <input type="text" id="pergunta" name="pergunta" placeholder="Digite sua pergunta"><br>
-            <label for="model">Modelo:</label><br>
-            <select id="model">
-                <option value="gpt-4.1-mini">GPT-4.1 Mini</option>
-                <option value="gpt-4.1">GPT-4.1</option>
-            </select>
             <span class="botoes">
                 <button class="btn-pgt" type="submit">Perguntar</button>
                 <button class="btn-limp" type="reset">Limpar</button>
@@ -35,5 +41,6 @@
     <script src="script.js"></script>
     <!-- Bibliote para converter o Markdown em html-->
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="efeito_sombra_botoes_dom.js"></script>
 </body>
 </html>
